@@ -1,114 +1,347 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Chanuka Life</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 
-body{
-font-family:Arial,sans-serif;
+*{
 margin:0;
 padding:0;
-background:#f4f8f2;
-color:#222;
+box-sizing:border-box;
 }
 
-header{
-background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
-url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');
+body{
+font-family:'Poppins',sans-serif;
+background:#111;
+color:white;
+overflow-x:hidden;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.65)),
+url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070');
 background-size:cover;
 background-position:center;
+position:relative;
+}
+
+/* NAVBAR */
+
+nav{
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+backdrop-filter:blur(8px);
+background:rgba(0,0,0,0.25);
+position:fixed;
+top:0;
+left:0;
+z-index:1000;
+}
+
+.logo{
+font-size:32px;
+font-weight:700;
 color:white;
-text-align:center;
-padding:100px 20px;
+}
+
+.logo span{
+color:#7CFC00;
+}
+
+nav ul{
+display:flex;
+gap:35px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#7CFC00;
+}
+
+.contact-btn{
+background:#59c13d;
+padding:14px 28px;
+border-radius:40px;
+text-decoration:none;
+color:white;
+font-weight:600;
+transition:0.3s;
+}
+
+.contact-btn:hover{
+transform:translateY(-3px);
+background:#74db57;
+}
+
+/* HERO CONTENT */
+
+.hero-content{
+width:100%;
 min-height:100vh;
 display:flex;
 align-items:center;
-justify-content:center;}
-
-.hero-content{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:100px;
+justify-content:space-between;
+padding:120px 8% 60px;
+gap:60px;
 flex-wrap:wrap;
-padding:40px;
-max-width:1400px;
-margin:auto;}
+}
 
 .hero-image{
 width:420px;
-height:auto;
-object-fit:cover;
-filter:drop-shadow(0 20px 40px rgba(0,0,0,0.6));
-background:transparent;
+border-radius:25px;
+box-shadow:0 15px 40px rgba(0,0,0,0.5);
+transition:0.4s;
 }
+
 .hero-image:hover{
-transform:translateY(0px) scale(1.03);
+transform:scale(1.03);
 }
 
-header h1{
-font-size:80px;
-font-weight:bold;
-letter-spacing:2px;}
-
-header p{
-font-size:24px;
+.hero-text{
+max-width:700px;
 }
 
-.button{
+.hero-text h3{
+font-size:50px;
+font-weight:300;
+color:#8cff66;
+margin-bottom:10px;
+}
+
+.hero-text h1{
+font-size:95px;
+line-height:1;
+margin-bottom:20px;
+}
+
+.hero-text p{
+font-size:34px;
+color:#8cff66;
+margin-bottom:25px;
+}
+
+.quote{
+font-size:28px;
+line-height:1.6;
+margin-bottom:35px;
+color:#eee;
+}
+
+.hero-btn{
 display:inline-block;
-background:#4CAF50;
-color:white;
-padding:15px 35px;
+padding:18px 40px;
+background:#59c13d;
 border-radius:50px;
 text-decoration:none;
+color:white;
 font-size:20px;
-font-weight:bold;
-transition:0.3s ease;
-box-shadow:0 10px 25px rgba(76,175,80,0.4);
+font-weight:600;
+transition:0.3s;
 }
 
-.button:hover{
-background:#66bb6a;
-transform:translateY(-3px);
+.hero-btn:hover{
+transform:translateY(-5px);
+background:#74db57;
+}
+
+/* CARDS */
+
+.cards{
+width:100%;
+padding:70px 8%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+background:#f5f5f5;
 }
 
 .card{
 background:white;
-padding:20px;
-margin:20px 0;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
+color:#222;
+padding:35px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+transition:0.3s;
 }
 
-footer{
-background:#1f3d1f;
-color:white;
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h2{
+margin-bottom:15px;
+font-size:28px;
+color:#3d9f28;
+}
+
+.card p{
+line-height:1.8;
+font-size:17px;
+}
+
+/* STATS */
+
+.stats{
+padding:70px 8%;
+background:
+linear-gradient(90deg,#061d07,#0d350f,#061d07);
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:40px;
 text-align:center;
-padding:20px;
+}
+
+.stat h1{
+font-size:60px;
+color:#8cff66;
+margin-bottom:10px;
+}
+
+.stat p{
+font-size:20px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1100px){
+
+.hero-content{
+justify-content:center;
+text-align:center;
+}
+
+.hero-text h1{
+font-size:70px;
+}
+
+.hero-text h3{
+font-size:40px;
+}
+
+.hero-text p{
+font-size:26px;
+}
+
+.quote{
+font-size:22px;
+}
+
+}
+
+@media(max-width:768px){
+
+nav{
+padding:20px 5%;
+flex-direction:column;
+gap:20px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+gap:18px;
+}
+
+.hero-content{
+padding-top:180px;
+}
+
+.hero-image{
+width:100%;
+max-width:350px;
+}
+
+.hero-text h1{
+font-size:55px;
+}
+
+.hero-text h3{
+font-size:30px;
+}
+
+.hero-text p{
+font-size:22px;
+}
+
+.quote{
+font-size:18px;
+}
+
+.hero-btn{
+padding:15px 30px;
+font-size:18px;
+}
+
 }
 
 </style>
 </head>
 
 <body>
-</nav>
 
-<header>
+<section class="hero">
+
+<nav>
+
+<div class="logo">
+Chanuka <span>Life</span>
+</div>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Community</a></li>
+<li><a href="#">Agriculture</a></li>
+<li><a href="#">Research</a></li>
+<li><a href="#">Gallery</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+
+<a href="#" class="contact-btn">
+Get In Touch
+</a>
+
+</nav>
 
 <div class="hero-content">
 
 <img src="myphoto.png" class="hero-image">
 
-<div>
+<div class="hero-text">
+
+<h3>Welcome to</h3>
+
 <h1>Chanuka Life</h1>
 
 <p>Work • Growth • Nature</p>
 
-<a class="button" href="#work">
+<div class="quote">
+“ප්‍රජාවත්, පරිසරයත් එක්ක ජීවත් වෙනෙනා
+කෙනෙක්ගේ ජීවන ගමන.”
+</div>
+
+<a href="#" class="hero-btn">
 Explore My Journey
 </a>
 
@@ -116,72 +349,67 @@ Explore My Journey
 
 </div>
 
-</header>
-
-<section id="about">
-<div class="card">
-<h2>About Me</h2>
-<p>
-I am passionate about working with communities and protecting nature.
-I believe sustainable development begins with empowered people,
-strong agriculture, and environmental responsibility.
-</p>
-</div>
 </section>
 
-<section id="work">
-<h2>Community Work</h2>
+<section class="cards">
 
 <div class="card">
-<h3>Tea Smallholder Awareness Programme</h3>
+<h2>Community Development</h2>
 <p>
-An awareness and training program for tea smallholders was successfully held in Werapitiya, aiming to strengthen sustainable tea cultivation practices, improve yield quality, and support better income generation for the beneficiaries.
+Working with rural communities for empowerment,
+development and sustainable change.
 </p>
 </div>
 
 <div class="card">
-<h3>Paddy Cultivation Training</h3>
+<h2>Agriculture</h2>
 <p>
-A paddy cultivation training programme was successfully held at Bathalagoda Rice Research and Development Institute with 36 participants.
+Passionate about farming, nature protection,
+and sustainable agriculture.
 </p>
 </div>
 
 <div class="card">
-<h3>Women Empowerment Programme</h3>
+<h2>Education</h2>
 <p>
-Capacity building and motivation programme for small-scale self-employment beneficiaries.
+Research, learning and sharing knowledge
+for future generations.
 </p>
 </div>
 
 <div class="card">
-<h3>Soil Conservation Programme</h3>
+<h2>Sri Lanka Journey</h2>
 <p>
-A soil conservation awareness programme was successfully conducted in Werapitiya.
+From village life to meaningful community work
+across Sri Lanka.
 </p>
 </div>
+
 </section>
 
-<section id="gallery">
-<h2>Gallery</h2>
-<div class="gallery">
-<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6">
-<img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399">
-<img src="https://images.unsplash.com/photo-1472396961693-142e6e269027">
-</div>
-</section>
+<section class="stats">
 
-<section id="contact">
-<div class="card">
-<h2>Contact</h2>
-<p>Email: chanuka81@gmail.com</p>
-<p>Phone: +94 776 353 688</p>
-<p>Facebook: https://www.facebook.com/chanuka.rajapaksha.73</p>
+<div class="stat">
+<h1>20+</h1>
+<p>Community Programs</p>
 </div>
-</section>
 
-<footer>
-<p>© 2026 Chanuka Life | Community • Agriculture • Development</p>
-</footer>
+<div class="stat">
+<h1>5+</h1>
+<p>Agriculture Projects</p>
+</div>
+
+<div class="stat">
+<h1>1000+</h1>
+<p>Lives Impacted</p>
+</div>
+
+<div class="stat">
+<h1>🇱🇰</h1>
+<p>Nuwara Eliya</p>
+</div>
+
+</section>
 
 </body>
 </html>
