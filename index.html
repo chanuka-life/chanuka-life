@@ -1,0 +1,680 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chanuka Life</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#08120c;
+color:white;
+overflow-x:hidden;
+}
+
+/* ================= HEADER ================= */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,0.45);
+backdrop-filter:blur(12px);
+z-index:1000;
+}
+
+.logo{
+display:flex;
+flex-direction:column;
+}
+
+.logo h1{
+font-size:48px;
+font-weight:800;
+line-height:1;
+}
+
+.logo span{
+color:#72ff00;
+}
+
+.logo p{
+font-size:16px;
+letter-spacing:4px;
+margin-top:8px;
+color:#b8ff89;
+}
+
+nav{
+display:flex;
+gap:35px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-size:18px;
+font-weight:600;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#72ff00;
+}
+
+.contact-btn{
+padding:16px 34px;
+background:#72ff00;
+color:#08120c;
+border-radius:50px;
+font-weight:700;
+text-decoration:none;
+transition:0.4s;
+}
+
+.contact-btn:hover{
+transform:translateY(-4px);
+box-shadow:0 10px 30px rgba(114,255,0,0.4);
+}
+
+/* ================= HERO ================= */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:160px 8% 100px;
+background:
+linear-gradient(rgba(0,0,0,0.55),
+rgba(0,0,0,0.6)),
+url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
+position:relative;
+}
+
+.hero-content{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:80px;
+width:100%;
+}
+
+.hero-image{
+flex:1;
+display:flex;
+justify-content:center;
+}
+
+.hero-image img{
+width:100%;
+max-width:480px;
+border-radius:40px;
+backdrop-filter:blur(10px);
+background:rgba(255,255,255,0.08);
+padding:20px;
+box-shadow:0 20px 60px rgba(0,0,0,0.45);
+transition:0.5s;
+}
+
+.hero-image img:hover{
+transform:scale(1.03);
+}
+
+.hero-text{
+flex:1;
+}
+
+.hero-text h3{
+font-size:70px;
+color:#72ff00;
+font-family:'Playfair Display',serif;
+font-style:italic;
+margin-bottom:10px;
+}
+
+.hero-text h1{
+font-size:110px;
+line-height:1;
+font-family:'Playfair Display',serif;
+margin-bottom:25px;
+}
+
+.hero-text h2{
+font-size:36px;
+color:#72ff00;
+margin-bottom:35px;
+}
+
+.hero-text p{
+font-size:32px;
+line-height:1.7;
+margin-bottom:40px;
+max-width:800px;
+}
+
+.hero-btn{
+display:inline-block;
+padding:22px 50px;
+background:#72ff00;
+color:#08120c;
+font-size:22px;
+font-weight:700;
+text-decoration:none;
+border-radius:60px;
+transition:0.4s;
+box-shadow:0 10px 35px rgba(114,255,0,0.4);
+}
+
+.hero-btn:hover{
+transform:translateY(-6px);
+box-shadow:0 15px 45px rgba(114,255,0,0.6);
+}
+
+/* ================= CARDS ================= */
+
+.cards{
+padding:100px 8%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+background:#f8f8f8;
+}
+
+.card{
+background:white;
+padding:40px;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:0.4s;
+color:#08120c;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card i{
+font-size:55px;
+color:#57c700;
+margin-bottom:25px;
+}
+
+.card h3{
+font-size:30px;
+margin-bottom:18px;
+}
+
+.card p{
+font-size:18px;
+line-height:1.8;
+}
+
+/* ================= STATS ================= */
+
+.stats{
+padding:80px 8%;
+background:
+linear-gradient(rgba(0,0,0,0.8),
+rgba(0,0,0,0.8)),
+url('https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=2070&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:40px;
+text-align:center;
+}
+
+.stat h2{
+font-size:70px;
+color:#72ff00;
+margin-bottom:15px;
+}
+
+.stat p{
+font-size:24px;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery{
+padding:100px 8%;
+background:#08120c;
+}
+
+.gallery-title{
+text-align:center;
+font-size:70px;
+margin-bottom:60px;
+color:#72ff00;
+}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
+}
+
+.gallery-grid img{
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:25px;
+transition:0.5s;
+}
+
+.gallery-grid img:hover{
+transform:scale(1.05);
+}
+
+/* ================= SOCIAL ================= */
+
+.social-section{
+padding:100px 8%;
+text-align:center;
+
+background:
+linear-gradient(rgba(0,0,0,0.75),
+rgba(0,0,0,0.75)),
+url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=2070&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
+}
+
+.social-section h2{
+font-size:60px;
+color:#72ff00;
+margin-bottom:20px;
+}
+
+.social-section p{
+font-size:22px;
+max-width:900px;
+margin:auto;
+line-height:1.8;
+margin-bottom:60px;
+}
+
+.contact-links{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.social-btn{
+padding:24px 45px;
+border-radius:70px;
+font-size:28px;
+font-weight:700;
+text-decoration:none;
+display:flex;
+align-items:center;
+gap:15px;
+color:white;
+transition:0.4s;
+}
+
+.social-btn:hover{
+transform:translateY(-8px) scale(1.05);
+}
+
+.facebook-btn{
+background:linear-gradient(135deg,#1877f2,#0d47a1);
+}
+
+.whatsapp-btn{
+background:linear-gradient(135deg,#25d366,#128c7e);
+}
+
+.email-btn{
+background:linear-gradient(135deg,#ff6b00,#ff0000);
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+padding:40px;
+text-align:center;
+background:#050905;
+font-size:18px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:1200px){
+
+.hero-content{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-text h1{
+font-size:80px;
+}
+
+.hero-text h3{
+font-size:50px;
+}
+
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+gap:25px;
+}
+
+nav{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero{
+padding-top:240px;
+}
+
+.hero-text h1{
+font-size:58px;
+}
+
+.hero-text h3{
+font-size:40px;
+}
+
+.hero-text h2{
+font-size:28px;
+}
+
+.hero-text p{
+font-size:22px;
+}
+
+.gallery-title{
+font-size:50px;
+}
+
+.social-section h2{
+font-size:42px;
+}
+
+.social-btn{
+width:100%;
+justify-content:center;
+font-size:22px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="logo">
+
+<h1>Chanuka <span>Life</span></h1>
+
+<p>Work • Growth • Nature</p>
+
+</div>
+
+<nav>
+
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Community</a>
+<a href="#">Agriculture</a>
+<a href="#">Research</a>
+<a href="#">Gallery</a>
+<a href="#">Contact</a>
+
+</nav>
+
+<a href="#" class="contact-btn">Get In Touch</a>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="hero-image">
+
+<img src="myphoto.png" alt="Chanuka">
+
+</div>
+
+<div class="hero-text">
+
+<h3>Welcome to</h3>
+
+<h1>Chanuka Life</h1>
+
+<h2>Work • Growth • Nature</h2>
+
+<p>
+“ප්‍රජාවත්, පරිසරයත් එක්ක ජීවත් වෙනෙනා කෙනෙකුගේ
+ජීවන ගමන.”
+</p>
+
+<a href="#" class="hero-btn">
+Explore My Journey
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= CARDS ================= -->
+
+<section class="cards">
+
+<div class="card">
+
+<i class="fa-solid fa-users"></i>
+
+<h3>Community Development</h3>
+
+<p>
+Working with rural communities for empowerment,
+development and sustainable change.
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-seedling"></i>
+
+<h3>Agriculture Enthusiast</h3>
+
+<p>
+Passionate about sustainable farming,
+soil conservation and nature protection.
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+<h3>Education & Research</h3>
+
+<p>
+Research, learning and sharing knowledge
+for future generations.
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-earth-asia"></i>
+
+<h3>Sri Lanka Journey</h3>
+
+<p>
+From village life to meaningful community work
+across Sri Lanka.
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= STATS ================= -->
+
+<section class="stats">
+
+<div class="stat">
+
+<h2>20+</h2>
+
+<p>Community Programs</p>
+
+</div>
+
+<div class="stat">
+
+<h2>5+</h2>
+
+<p>Agriculture Projects</p>
+
+</div>
+
+<div class="stat">
+
+<h2>1000+</h2>
+
+<p>Lives Impacted</p>
+
+</div>
+
+<div class="stat">
+
+<h2>LK</h2>
+
+<p>Nuwara Eliya</p>
+
+</div>
+
+</section>
+
+<!-- ================= GALLERY ================= -->
+
+<section class="gallery">
+
+<h2 class="gallery-title">
+Gallery
+</h2>
+
+<div class="gallery-grid">
+
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop">
+
+<img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=1200&auto=format&fit=crop">
+
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop">
+
+</div>
+
+</section>
+
+<!-- ================= SOCIAL ================= -->
+
+<section class="social-section">
+
+<h2>Connect With Me</h2>
+
+<p>
+Follow my journey, community work,
+agriculture projects and connect with me directly.
+</p>
+
+<div class="contact-links">
+
+<a href="https://www.facebook.com/chanuka.rajapaksha.73"
+target="_blank"
+class="social-btn facebook-btn">
+
+<i class="fa-brands fa-facebook-f"></i>
+Facebook
+
+</a>
+
+<a href="https://wa.me/94776353688"
+target="_blank"
+class="social-btn whatsapp-btn">
+
+<i class="fa-brands fa-whatsapp"></i>
+WhatsApp
+
+</a>
+
+<a href="mailto:chanuka81@gmail.com"
+class="social-btn email-btn">
+
+<i class="fa-solid fa-envelope"></i>
+Email
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+© 2026 Chanuka Life | Designed with Passion & Nature 🌿
+
+</footer>
+
+</body>
+</html>
