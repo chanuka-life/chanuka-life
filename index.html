@@ -3,7 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Chanuka Life</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -11,39 +15,44 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#0d0d0d;
+background:#000;
 color:white;
 overflow-x:hidden;
 }
 
-/* NAVBAR */
+body::before{
+content:"";
+position:fixed;
+width:100%;
+height:100%;
+background:
+linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.75)),
+url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1974');
+background-size:cover;
+background-position:center;
+z-index:-1;
+}
 
 nav{
 position:fixed;
 top:0;
-left:0;
 width:100%;
-
+padding:20px 70px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-
-padding:20px 70px;
-
-background:rgba(0,0,0,0.45);
-backdrop-filter:blur(12px);
-
+background:rgba(0,0,0,0.35);
+backdrop-filter:blur(10px);
 z-index:1000;
 }
 
 .logo{
 font-size:42px;
 font-weight:800;
-color:white;
 }
 
 .logo span{
@@ -52,15 +61,14 @@ color:#7CFC00;
 
 nav ul{
 display:flex;
+gap:40px;
 list-style:none;
-gap:35px;
 }
 
 nav ul li a{
-text-decoration:none;
 color:white;
-font-weight:600;
-font-size:18px;
+text-decoration:none;
+font-weight:500;
 transition:0.3s;
 }
 
@@ -69,240 +77,181 @@ color:#7CFC00;
 }
 
 .contact-btn{
-background:#63d63a;
 padding:15px 35px;
+background:#67d437;
 border-radius:50px;
 text-decoration:none;
 color:white;
-font-weight:700;
-font-size:18px;
+font-weight:600;
 transition:0.3s;
 }
 
 .contact-btn:hover{
-transform:scale(1.05);
-background:#74ff40;
+transform:translateY(-4px);
+box-shadow:0 0 25px rgba(124,252,0,0.5);
 }
 
-/* HERO SECTION */
-
-header{
+.hero{
 min-height:100vh;
-
-background:
-linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.75)),
-url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1974');
-
-background-size:cover;
-background-position:center;
-
-padding:150px 8% 80px;
-}
-
-.hero-content{
 display:flex;
-justify-content:space-between;
 align-items:center;
-gap:80px;
-flex-wrap:wrap;
+justify-content:space-between;
+padding:140px 90px 80px;
+gap:70px;
 }
 
 .hero-image{
+flex:1;
+display:flex;
+justify-content:center;
+}
 
-width:400px;
-height:620px;
+.hero-image img{
+width:420px;
+max-width:100%;
+filter:drop-shadow(0 0 25px rgba(124,252,0,0.25));
+transition:0.4s;
+}
 
-background-image:url('./myphoto.png');
-
-background-size:cover;
-background-position:center top;
-background-repeat:no-repeat;
-
-border-radius:35px;
-
-box-shadow:0 25px 70px rgba(0,0,0,0.7);
-
-animation:float 4s ease-in-out infinite;
+.hero-image img:hover{
+transform:scale(1.03);
 }
 
 .hero-text{
-max-width:700px;
+flex:1;
 }
 
 .hero-text h3{
-font-size:55px;
+font-size:65px;
 color:#7CFC00;
 margin-bottom:10px;
 }
 
 .hero-text h1{
-font-size:100px;
+font-size:95px;
 line-height:1;
 margin-bottom:25px;
+font-weight:800;
 }
 
 .hero-text p{
 font-size:30px;
 color:#7CFC00;
 margin-bottom:35px;
-font-weight:600;
+font-weight:500;
 }
 
 .quote{
-font-size:32px;
+font-size:34px;
 line-height:1.7;
 margin-bottom:45px;
-color:#f1f1f1;
+color:#eee;
 }
 
 .main-btn{
 display:inline-block;
-
-padding:22px 60px;
-
-background:#63d63a;
-
-border-radius:60px;
-
-text-decoration:none;
+padding:22px 55px;
+background:#67d437;
 color:white;
-
+text-decoration:none;
+border-radius:60px;
 font-size:28px;
-font-weight:700;
-
-box-shadow:0 0 35px rgba(99,214,58,0.5);
-
+font-weight:600;
 transition:0.3s;
 }
 
 .main-btn:hover{
-transform:translateY(-5px) scale(1.05);
+transform:translateY(-5px);
+box-shadow:0 0 30px rgba(124,252,0,0.6);
 }
 
-/* CARDS SECTION */
-
 .cards{
+padding:40px 90px 100px;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-
-padding:80px 8%;
-
-background:#111;
+gap:30px;
 }
 
 .card{
-background:#1a1a1a;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,0.1);
 padding:35px;
 border-radius:25px;
 transition:0.3s;
-box-shadow:0 10px 25px rgba(0,0,0,0.4);
 }
 
 .card:hover{
 transform:translateY(-10px);
-background:#202020;
+background:rgba(255,255,255,0.12);
 }
 
 .card h2{
-font-size:30px;
 margin-bottom:15px;
-color:#7CFC00;
+font-size:30px;
 }
 
 .card p{
-font-size:18px;
-line-height:1.7;
+line-height:1.8;
 color:#ddd;
+font-size:18px;
 }
-
-/* STATS SECTION */
 
 .stats{
+padding:50px 90px 100px;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 gap:30px;
-
-padding:70px 8%;
-
-background:
-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
-url('https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1974');
-
-background-size:cover;
-background-position:center;
-}
-
-.stat{
 text-align:center;
 }
 
-.stat h1{
-font-size:65px;
+.stat-box{
+background:rgba(255,255,255,0.06);
+padding:35px;
+border-radius:25px;
+backdrop-filter:blur(10px);
+}
+
+.stat-box h1{
+font-size:60px;
 color:#7CFC00;
 margin-bottom:10px;
 }
 
-.stat p{
-font-size:22px;
+.stat-box p{
+font-size:20px;
 }
 
-/* FOOTER */
-
 footer{
-background:#000;
-padding:30px;
+padding:35px;
 text-align:center;
+background:#050505;
 font-size:18px;
 color:#aaa;
 }
 
-/* ANIMATION */
+@media(max-width:1100px){
 
-@keyframes float{
-
-0%{
-transform:translateY(0);
-}
-
-50%{
-transform:translateY(-10px);
-}
-
-100%{
-transform:translateY(0);
-}
-
-}
-
-/* MOBILE */
-
-@media(max-width:950px){
-
-.hero-content{
+.hero{
 flex-direction:column;
 text-align:center;
-}
-
-.hero-image{
-width:300px;
-height:450px;
+padding-top:170px;
 }
 
 .hero-text h1{
-font-size:60px;
+font-size:70px;
 }
 
 .hero-text h3{
-font-size:40px;
+font-size:45px;
 }
 
 .quote{
-font-size:22px;
+font-size:26px;
 }
 
 nav{
-padding:15px 20px;
+padding:20px 30px;
 }
 
 nav ul{
@@ -310,56 +259,11 @@ display:none;
 }
 
 }
-.hero-image img{
-    transition:0.4s;
-    filter:drop-shadow(0 0 25px rgba(124,252,0,0.35));
-}
 
-.hero-image img:hover{
-    transform:scale(1.03);
-}
-
-nav{
-    backdrop-filter:blur(10px);
-    background:rgba(0,0,0,0.45);
-}
-
-.button{
-    transition:0.3s;
-}
-
-.button:hover{
-    transform:translateY(-3px);
-    box-shadow:0 0 25px rgba(124,252,0,0.5);
-}
-
-.info-cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
-    margin-top:80px;
-}
-
-.card{
-    background:rgba(255,255,255,0.08);
-    backdrop-filter:blur(12px);
-    border:1px solid rgba(255,255,255,0.1);
-    border-radius:20px;
-    padding:30px;
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-    background:rgba(255,255,255,0.12);
-}
 </style>
-
 </head>
 
 <body>
-
-<!-- NAVBAR -->
 
 <nav>
 
@@ -377,19 +281,15 @@ Chanuka <span>Life</span>
 <li><a href="#">Contact</a></li>
 </ul>
 
-<a href="#" class="contact-btn">
-Get In Touch
-</a>
+<a href="#" class="contact-btn">Get In Touch</a>
 
 </nav>
 
-<!-- HERO -->
+<section class="hero">
 
-<header>
-
-<div class="hero-content">
-
-<div class="hero-image"></div>
+<div class="hero-image">
+<img src="myphoto.png">
+</div>
 
 <div class="hero-text">
 
@@ -409,33 +309,7 @@ Explore My Journey
 
 </div>
 
-</div>
-
-</header>
-<section class="info-cards">
-
-<div class="card">
-<h2>Community Development</h2>
-<p>Working with rural communities for empowerment and sustainable change.</p>
-</div>
-
-<div class="card">
-<h2>Agriculture</h2>
-<p>Passionate about tea cultivation, nature and modern farming.</p>
-</div>
-
-<div class="card">
-<h2>Education</h2>
-<p>Research, learning and sharing knowledge for future generations.</p>
-</div>
-
-<div class="card">
-<h2>Sri Lanka Journey</h2>
-<p>From village life to meaningful service across Sri Lanka.</p>
-</div>
-
 </section>
-<!-- CARDS -->
 
 <section class="cards">
 
@@ -443,69 +317,63 @@ Explore My Journey
 <h2>Community Development</h2>
 <p>
 Working with rural communities for empowerment,
-development and sustainable change.
+leadership and sustainable social development.
 </p>
 </div>
 
 <div class="card">
 <h2>Agriculture</h2>
 <p>
-Passionate about farming, tea cultivation,
-nature protection and sustainable agriculture.
+Passionate about tea cultivation,
+nature protection and modern farming.
 </p>
 </div>
 
 <div class="card">
-<h2>Education</h2>
+<h2>Education & Research</h2>
 <p>
-Research, learning and sharing knowledge
-for future generations.
+Research, learning and sharing
+knowledge for future generations.
 </p>
 </div>
 
 <div class="card">
 <h2>Sri Lanka Journey</h2>
 <p>
-From village life to meaningful community work
-across Sri Lanka.
+From village life to meaningful
+community work across Sri Lanka.
 </p>
 </div>
 
 </section>
 
-<!-- STATS -->
-
 <section class="stats">
 
-<div class="stat">
+<div class="stat-box">
 <h1>20+</h1>
 <p>Community Programs</p>
 </div>
 
-<div class="stat">
+<div class="stat-box">
 <h1>5+</h1>
 <p>Agriculture Projects</p>
 </div>
 
-<div class="stat">
+<div class="stat-box">
 <h1>1000+</h1>
 <p>Lives Impacted</p>
 </div>
 
-<div class="stat">
+<div class="stat-box">
 <h1>LK</h1>
 <p>Nuwara Eliya</p>
 </div>
 
 </section>
 
-<!-- FOOTER -->
-
 <footer>
-© 2026 Chanuka Life | Built with passion for community & nature.
-</footer>
-<footer style="text-align:center;padding:30px;color:white;background:#111;margin-top:60px;">
 © 2026 Chanuka Life | Built with Passion 💚
 </footer>
+
 </body>
 </html>
