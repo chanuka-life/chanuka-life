@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -42,7 +43,7 @@ header{
     justify-content:space-between;
     align-items:center;
     background:rgba(0,0,0,0.45);
-    backdrop-filter:blur(10px);
+    backdrop-filter:blur(12px);
     z-index:1000;
 }
 
@@ -65,7 +66,7 @@ header{
 
 nav{
     display:flex;
-    gap:45px;
+    gap:40px;
 }
 
 nav a{
@@ -103,9 +104,11 @@ nav a:hover{
     justify-content:space-between;
     align-items:center;
     padding:180px 90px 80px;
+
     background:
-    linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.7)),
+    linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.75)),
     url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop');
+
     background-size:cover;
     background-position:center;
 }
@@ -160,7 +163,7 @@ nav a:hover{
 }
 
 .hero-text p{
-    font-size:34px;
+    font-size:32px;
     line-height:1.8;
     margin-bottom:45px;
 }
@@ -182,18 +185,102 @@ nav a:hover{
     box-shadow:0 0 30px #7CFC00;
 }
 
+/* ABOUT */
+
+.about{
+    padding:120px 80px;
+    background:#08120c;
+}
+
+.section-title{
+    text-align:center;
+    font-size:70px;
+    color:#7CFC00;
+    margin-bottom:70px;
+}
+
+.about-content{
+    display:flex;
+    gap:50px;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.about-box{
+    flex:1;
+    min-width:300px;
+    background:#111;
+    padding:40px;
+    border-radius:30px;
+    transition:0.4s;
+}
+
+.about-box:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px #7CFC00;
+}
+
+.about-box h3{
+    color:#7CFC00;
+    font-size:35px;
+    margin-bottom:20px;
+}
+
+.about-box p{
+    font-size:20px;
+    line-height:1.8;
+}
+
+/* AGRICULTURE */
+
+.agriculture{
+    padding:120px 80px;
+    background:black;
+}
+
+.agri-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.agri-card{
+    background:#111;
+    border-radius:30px;
+    overflow:hidden;
+    transition:0.4s;
+}
+
+.agri-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 0 25px #7CFC00;
+}
+
+.agri-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.agri-card-content{
+    padding:30px;
+}
+
+.agri-card-content h3{
+    color:#7CFC00;
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.agri-card-content p{
+    line-height:1.8;
+}
+
 /* GALLERY */
 
 .gallery{
     padding:120px 80px;
     background:#0d1710;
-}
-
-.gallery-title{
-    text-align:center;
-    font-size:70px;
-    margin-bottom:70px;
-    color:#7CFC00;
 }
 
 .gallery-grid{
@@ -208,7 +295,6 @@ nav a:hover{
     object-fit:cover;
     border-radius:25px;
     transition:0.4s;
-    box-shadow:0 0 20px rgba(0,0,0,0.4);
 }
 
 .gallery-grid img:hover{
@@ -221,9 +307,11 @@ nav a:hover{
 .contact{
     padding:120px 20px;
     text-align:center;
+
     background:
     linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
     url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop');
+
     background-size:cover;
     background-position:center;
 }
@@ -248,7 +336,7 @@ nav a:hover{
 }
 
 .contact-links a{
-    width:330px;
+    width:320px;
     padding:35px;
     border-radius:30px;
     text-decoration:none;
@@ -310,7 +398,6 @@ footer p{
     color:white;
     text-decoration:none;
     z-index:999;
-    box-shadow:0 0 20px rgba(0,0,0,0.4);
 }
 
 /* MOBILE */
@@ -352,7 +439,7 @@ nav{
     font-size:45px;
 }
 
-.gallery-title{
+.section-title{
     font-size:50px;
 }
 
@@ -376,9 +463,10 @@ nav{
 
 <nav>
 <a href="#">Home</a>
-<a href="#">About</a>
-<a href="#">Gallery</a>
-<a href="#">Contact</a>
+<a href="#about">About</a>
+<a href="#agriculture">Agriculture</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
 </nav>
 
 <a href="#contact" class="contact-btn">
@@ -404,7 +492,7 @@ Get In Touch
 <h2>Work • Growth • Nature</h2>
 
 <p>
-“ප්‍රජාවත්, පරිසරයත් එක්ක ජීවත් වෙනෙනා
+“ප්‍රජාවත්, පරිසරයත් එක්ක ජීවත් වෙන
 කෙනෙකුගේ ජීවන ගමන.”
 </p>
 
@@ -414,11 +502,112 @@ Get In Touch
 
 </section>
 
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="about-content">
+
+<div class="about-box">
+
+<h3>My Journey</h3>
+
+<p>
+I am passionate about community development,
+nature, agriculture and creating positive change.
+This platform shares my journey, experiences and
+projects with the world.
+</p>
+
+</div>
+
+<div class="about-box">
+
+<h3>Vision</h3>
+
+<p>
+To inspire people through leadership, hard work,
+sustainability and meaningful community projects
+while protecting nature and empowering others.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- AGRICULTURE -->
+
+<section class="agriculture" id="agriculture">
+
+<h2 class="section-title">Agriculture Projects</h2>
+
+<div class="agri-grid">
+
+<div class="agri-card">
+
+<img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200&auto=format&fit=crop">
+
+<div class="agri-card-content">
+
+<h3>Tea Cultivation</h3>
+
+<p>
+Modern and sustainable tea cultivation methods
+focused on quality production and environmental
+care.
+</p>
+
+</div>
+
+</div>
+
+<div class="agri-card">
+
+<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop">
+
+<div class="agri-card-content">
+
+<h3>Community Farming</h3>
+
+<p>
+Supporting local agriculture projects and helping
+communities grow with sustainable farming ideas.
+</p>
+
+</div>
+
+</div>
+
+<div class="agri-card">
+
+<img src="https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?q=80&w=1200&auto=format&fit=crop">
+
+<div class="agri-card-content">
+
+<h3>Nature Protection</h3>
+
+<p>
+Promoting eco-friendly agriculture and protecting
+the environment for future generations.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
 <!-- GALLERY -->
 
-<section class="gallery">
+<section class="gallery" id="gallery">
 
-<h2 class="gallery-title">Gallery</h2>
+<h2 class="section-title">Gallery</h2>
 
 <div class="gallery-grid">
 
@@ -439,7 +628,8 @@ Get In Touch
 <h2>Connect With Me</h2>
 
 <p>
-Follow my journey, community work, agriculture projects and connect with me directly.
+Follow my journey, community work and agriculture
+projects while connecting with me directly.
 </p>
 
 <div class="contact-links">
