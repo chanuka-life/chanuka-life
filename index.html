@@ -7,6 +7,7 @@
 <title>Chanuka Life</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -15,37 +16,42 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
 body{
 font-family:'Poppins',sans-serif;
-background:#081108;
+background:#071107;
 color:white;
 overflow-x:hidden;
 }
 
-/* HERO */
+/* HERO SECTION */
 
 .hero{
+
 width:100%;
 min-height:100vh;
 
 background:
-linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.55)),
-url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=2070');
+linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.60)),
+url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070');
 
 background-size:cover;
 background-position:center;
+background-attachment:fixed;
+
 position:relative;
 }
 
 /* NAVBAR */
 
 nav{
+
 width:100%;
 height:100px;
 
-padding:0 60px;
+padding:0 70px;
 
 display:flex;
 justify-content:space-between;
@@ -54,18 +60,21 @@ align-items:center;
 position:fixed;
 top:0;
 left:0;
-z-index:999;
+z-index:1000;
 
-background:rgba(0,0,0,0.30);
+background:rgba(0,0,0,0.28);
 backdrop-filter:blur(12px);
+
+border-bottom:1px solid rgba(255,255,255,0.08);
+
 }
 
 /* LOGO */
 
 .logo h1{
-font-size:58px;
-line-height:0.9;
+font-size:54px;
 font-weight:800;
+line-height:0.9;
 }
 
 .logo span{
@@ -73,30 +82,34 @@ color:#7CFF2B;
 }
 
 .logo p{
-margin-top:12px;
+
+margin-top:10px;
+
 font-size:14px;
-letter-spacing:3px;
-color:#b7ff96;
+letter-spacing:4px;
+
+color:#b8ff96;
 }
 
 /* MENU */
 
 nav ul{
+
 display:flex;
 align-items:center;
 gap:42px;
+
 list-style:none;
 }
 
-nav ul li{
-white-space:nowrap;
-}
-
 nav ul li a{
+
 text-decoration:none;
 color:white;
-font-size:20px;
+
+font-size:18px;
 font-weight:600;
+
 transition:0.3s;
 }
 
@@ -107,52 +120,77 @@ color:#7CFF2B;
 /* BUTTON */
 
 .contact-btn{
+
 padding:18px 38px;
+
+background:#68db29;
+
 border-radius:50px;
-background:#67dd22;
+
 text-decoration:none;
 color:white;
-font-size:20px;
+
+font-size:18px;
 font-weight:700;
+
 transition:0.3s;
 }
 
 .contact-btn:hover{
+
 transform:translateY(-4px);
-box-shadow:0 0 30px rgba(115,255,0,0.45);
+
+box-shadow:0 0 30px rgba(124,255,43,0.45);
 }
 
 /* HERO CONTENT */
 
 .hero-content{
+
 padding-top:170px;
-padding-left:70px;
-padding-right:70px;
+padding-left:80px;
+padding-right:80px;
 
 display:flex;
 justify-content:space-between;
 align-items:center;
-gap:70px;
+
+gap:80px;
 }
 
-/* IMAGE */
+/* IMAGE CARD */
 
 .hero-image{
-width:470px;
-height:650px;
 
-background:rgba(255,255,255,0.08);
-backdrop-filter:blur(10px);
+width:450px;
+height:620px;
 
-border-radius:30px;
+border-radius:35px;
 overflow:hidden;
 
-box-shadow:0 10px 40px rgba(0,0,0,0.45);
+background:rgba(255,255,255,0.08);
+
+backdrop-filter:blur(14px);
+
+box-shadow:0 15px 50px rgba(0,0,0,0.45);
+
+border:1px solid rgba(255,255,255,0.08);
+
+transition:0.4s;
+}
+
+.hero-image:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 20px 60px rgba(0,0,0,0.55);
 }
 
 .hero-image img{
+
 width:100%;
 height:100%;
+
 object-fit:cover;
 }
 
@@ -163,105 +201,138 @@ max-width:760px;
 }
 
 .hero-text h3{
-font-size:65px;
+
+font-size:70px;
+
 font-family:'Playfair Display',serif;
+
 font-style:italic;
+
 color:#7CFF2B;
-margin-bottom:10px;
+
+margin-bottom:15px;
 }
 
 .hero-text h1{
+
 font-size:110px;
+
 line-height:1;
-margin-bottom:20px;
+
+margin-bottom:25px;
+
 font-family:'Playfair Display',serif;
 }
 
-.hero-text .tagline{
-font-size:38px;
+.tagline{
+
+font-size:40px;
 font-weight:600;
-color:#90ff54;
-margin-bottom:35px;
+
+color:#92ff57;
+
+margin-bottom:40px;
 }
 
 .quote{
+
 font-size:30px;
 line-height:1.8;
-margin-bottom:45px;
-color:#f2f2f2;
+
+color:#f1f1f1;
+
+margin-bottom:50px;
 }
 
-/* BUTTON */
+/* MAIN BUTTON */
 
 .main-btn{
+
 display:inline-block;
-padding:22px 55px;
+
+padding:24px 60px;
+
+background:#57c92a;
+
 border-radius:60px;
 
-background:#59c92a;
+text-decoration:none;
 color:white;
 
-font-size:25px;
+font-size:24px;
 font-weight:700;
-text-decoration:none;
 
 transition:0.3s;
 }
 
 .main-btn:hover{
+
 transform:translateY(-5px);
-box-shadow:0 0 35px rgba(115,255,0,0.45);
+
+box-shadow:0 0 40px rgba(124,255,43,0.45);
 }
 
 /* CARDS */
 
 .cards{
+
 margin-top:-70px;
 
-padding-left:70px;
-padding-right:70px;
+padding-left:80px;
+padding-right:80px;
 padding-bottom:80px;
 
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
 gap:25px;
 }
 
 .card{
+
 background:white;
 color:#222;
 
 padding:35px;
+
 border-radius:25px;
 
-box-shadow:0 8px 30px rgba(0,0,0,0.15);
+box-shadow:0 10px 35px rgba(0,0,0,0.15);
 
 transition:0.3s;
 }
 
 .card:hover{
+
 transform:translateY(-10px);
 }
 
 .card h2{
-font-size:30px;
+
+font-size:28px;
+
 margin-bottom:18px;
-color:#2e6f1c;
+
+color:#2f6f1d;
 }
 
 .card p{
+
 font-size:18px;
+
 line-height:1.8;
+
 color:#555;
 }
 
 /* STATS */
 
 .stats{
-background:
-linear-gradient(90deg,#081108,#123212,#081108);
 
-padding:60px 70px;
+background:
+linear-gradient(90deg,#071107,#123412,#071107);
+
+padding:60px 80px;
 
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -274,23 +345,32 @@ text-align:center;
 }
 
 .stat h1{
-font-size:60px;
+
+font-size:62px;
+
 color:#7CFF2B;
+
 margin-bottom:10px;
 }
 
 .stat p{
+
 font-size:22px;
 }
 
 /* FOOTER */
 
 footer{
+
 padding:30px;
-background:#050505;
+
 text-align:center;
+
+background:#050505;
+
+color:#999;
+
 font-size:18px;
-color:#aaa;
 }
 
 /* MOBILE */
@@ -298,11 +378,13 @@ color:#aaa;
 @media(max-width:1200px){
 
 .hero-content{
+
 flex-direction:column;
 text-align:center;
 }
 
 .hero-image{
+
 width:100%;
 max-width:420px;
 height:540px;
@@ -316,12 +398,12 @@ font-size:75px;
 font-size:45px;
 }
 
-.hero-text .tagline{
+.tagline{
 font-size:28px;
 }
 
 .quote{
-font-size:24px;
+font-size:22px;
 }
 
 nav ul{
@@ -347,11 +429,13 @@ font-size:40px;
 .hero-content,
 .cards,
 .stats{
+
 padding-left:25px;
 padding-right:25px;
 }
 
 nav{
+
 padding:0 25px;
 }
 
@@ -375,11 +459,19 @@ display:none;
 <nav>
 
 <div class="logo">
-<h1>Chanuka <span>Life</span></h1>
-<p>Work • Growth • Nature</p>
+
+<h1>
+Chanuka <span>Life</span>
+</h1>
+
+<p>
+Work • Growth • Nature
+</p>
+
 </div>
 
 <ul>
+
 <li><a href="#">Home</a></li>
 <li><a href="#">About</a></li>
 <li><a href="#">Community</a></li>
@@ -387,6 +479,7 @@ display:none;
 <li><a href="#">Research</a></li>
 <li><a href="#">Gallery</a></li>
 <li><a href="#">Contact</a></li>
+
 </ul>
 
 <a href="#" class="contact-btn">
@@ -395,13 +488,19 @@ Get In Touch
 
 </nav>
 
-<!-- CONTENT -->
+<!-- HERO CONTENT -->
 
 <div class="hero-content">
 
+<!-- IMAGE -->
+
 <div class="hero-image">
+
 <img src="myphoto.png">
+
 </div>
+
+<!-- TEXT -->
 
 <div class="hero-text">
 
@@ -432,35 +531,47 @@ Explore My Journey
 <section class="cards">
 
 <div class="card">
+
 <h2>Community Development</h2>
+
 <p>
 Working with rural communities for empowerment,
 development and sustainable change.
 </p>
+
 </div>
 
 <div class="card">
+
 <h2>Agriculture</h2>
+
 <p>
 Passionate about farming, tea cultivation
 and environmental conservation.
 </p>
+
 </div>
 
 <div class="card">
+
 <h2>Research & Education</h2>
+
 <p>
 Learning, research and knowledge sharing
 for future generations.
 </p>
+
 </div>
 
 <div class="card">
+
 <h2>Sri Lanka Journey</h2>
+
 <p>
 A meaningful journey from village life
 towards service and inspiration.
 </p>
+
 </div>
 
 </section>
@@ -492,7 +603,9 @@ towards service and inspiration.
 </section>
 
 <footer>
+
 © 2026 Chanuka Life • Built with Passion 💚
+
 </footer>
 
 </body>
