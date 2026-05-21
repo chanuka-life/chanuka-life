@@ -247,7 +247,12 @@ nav a:hover{
 .agri-card{
     background:#111;
     border-radius:30px;
+    .agri-card{
+    background:#111;
+    border-radius:30px;
     overflow:hidden;
+    transition:0.4s;
+}
     transition:0.4s;
 }
 
@@ -258,8 +263,15 @@ nav a:hover{
 
 .agri-card img{
     width:100%;
-    height:250px;
+    height:280px;
     object-fit:cover;
+    object-position:center;
+    display:block;
+    transition:0.4s;
+}
+
+.agri-card:hover img{
+    transform:scale(1.08);
 }
 
 .agri-card-content{
