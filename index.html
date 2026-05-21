@@ -7,6 +7,8 @@
 <title>Chanuka Life</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
@@ -14,239 +16,21 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 <style>
 
-/* ================= GLOBAL ================= */
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 scroll-behavior:smooth;
 }
-<!-- ================= CONTACT / SOCIAL SECTION ================= -->
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-
-<section class="social-section">
-
-<h2>Connect With Me</h2>
-
-<p>
-Follow my journey, community work, agriculture projects
-and connect with me directly.
-</p>
-
-<div class="contact-links">
-
-<a href="https://www.facebook.com/chanuka.rajapaksha.73"
-target="_blank"
-class="social-btn facebook">
-
-<i class="fab fa-facebook-f"></i>
-Facebook
-
-</a>
-
-<a href="https://wa.me/94776353688"
-target="_blank"
-class="social-btn whatsapp">
-
-<i class="fab fa-whatsapp"></i>
-WhatsApp
-
-</a>
-
-<a href="mailto:chanuka81@gmail.com"
-class="social-btn email">
-
-<i class="fas fa-envelope"></i>
-Email
-
-</a>
-
-</div>
-
-</section>
-
-<style>
-
-/* ================= CONTACT SECTION ================= */
-
-.social-section{
-padding:120px 10%;
-text-align:center;
-
-background:
-linear-gradient(rgba(0,0,0,0.75),
-rgba(0,0,0,0.75)),
-
-url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');
-
-background-size:cover;
-background-position:center;
-background-attachment:fixed;
-}
-
-.social-section h2{
-font-size:75px;
-font-weight:800;
-margin-bottom:25px;
-color:#7CFC00;
-
-text-shadow:
-0 0 15px rgba(124,252,0,0.7),
-0 0 30px rgba(124,252,0,0.5);
-}
-
-.social-section p{
-font-size:24px;
-line-height:1.9;
-color:white;
-max-width:950px;
-margin:auto;
-margin-bottom:60px;
-}
-
-.contact-links{
-display:flex;
-justify-content:center;
-align-items:center;
-gap:40px;
-flex-wrap:wrap;
-}
-
-.social-btn{
-padding:28px 60px;
-border-radius:35px;
-
-font-size:30px;
-font-weight:700;
-
-text-decoration:none;
-color:white;
-
-display:flex;
-align-items:center;
-gap:18px;
-
-transition:0.4s ease;
-
-box-shadow:
-0 0 20px rgba(0,0,0,0.4),
-0 0 40px rgba(0,0,0,0.2);
-}
-
-.social-btn:hover{
-
-transform:
-translateY(-10px)
-scale(1.05);
-
-box-shadow:
-0 0 25px rgba(255,255,255,0.2),
-0 0 45px rgba(124,252,0,0.4);
-}
-
-/* FACEBOOK */
-
-.facebook{
-background:
-linear-gradient(45deg,#1877f2,#1457c3);
-}
-
-/* WHATSAPP */
-
-.whatsapp{
-background:
-linear-gradient(45deg,#25d366,#128c7e);
-}
-
-/* EMAIL */
-
-.email{
-background:
-linear-gradient(45deg,#ff512f,#dd2476);
-}
-
-/* ICONS */
-
-.social-btn i{
-font-size:34px;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.social-section h2{
-font-size:48px;
-}
-
-.social-section p{
-font-size:18px;
-}
-
-.social-btn{
-width:100%;
-justify-content:center;
-font-size:24px;
-padding:22px 25px;
-}
-
-}
-
-</style>
 body{
 font-family:'Poppins',sans-serif;
-background:#08120c;
+background:black;
 color:white;
 overflow-x:hidden;
-cursor:none;
 }
 
-/* ================= CUSTOM CURSOR ================= */
-
-.cursor{
-width:20px;
-height:20px;
-border:2px solid #7CFC00;
-border-radius:50%;
-position:fixed;
-transform:translate(-50%,-50%);
-pointer-events:none;
-z-index:9999;
-transition:0.08s;
-box-shadow:0 0 15px #7CFC00;
-}
-
-/* ================= LOADING SCREEN ================= */
-
-.loader{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100vh;
-background:black;
-display:flex;
-justify-content:center;
-align-items:center;
-z-index:99999;
-font-size:45px;
-font-weight:bold;
-color:#7CFC00;
-animation:fadeOut 1s ease forwards;
-animation-delay:2s;
-}
-
-@keyframes fadeOut{
-to{
-opacity:0;
-visibility:hidden;
-}
-}
-
-/* ================= HEADER ================= */
+/* HEADER */
 
 header{
 position:fixed;
@@ -258,12 +42,12 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 background:rgba(0,0,0,0.45);
-backdrop-filter:blur(12px);
-z-index:999;
+backdrop-filter:blur(10px);
+z-index:1000;
 }
 
 .logo h1{
-font-size:65px;
+font-size:60px;
 font-weight:800;
 line-height:0.9;
 }
@@ -273,134 +57,97 @@ color:#7CFC00;
 }
 
 .logo p{
-margin-top:10px;
 font-size:14px;
 letter-spacing:5px;
+margin-top:10px;
 color:#c6ff9d;
 }
 
 nav{
 display:flex;
-gap:45px;
+gap:40px;
 }
 
 nav a{
-text-decoration:none;
 color:white;
-font-weight:600;
+text-decoration:none;
 font-size:18px;
+font-weight:600;
 transition:0.3s;
-position:relative;
 }
 
 nav a:hover{
 color:#7CFC00;
 }
 
-nav a::after{
-content:'';
-position:absolute;
-left:0;
-bottom:-8px;
-width:0%;
-height:3px;
-background:#7CFC00;
-transition:0.3s;
-}
-
-nav a:hover::after{
-width:100%;
-}
-
 .contact-btn{
 padding:18px 35px;
 background:#7CFC00;
-border-radius:50px;
 color:black;
 font-weight:700;
+border-radius:50px;
 text-decoration:none;
 transition:0.3s;
 }
 
 .contact-btn:hover{
-transform:scale(1.08);
-box-shadow:0 0 25px #7CFC00;
+transform:scale(1.05);
 }
 
-/* ================= HERO SECTION ================= */
+/* HERO */
 
 .hero{
-min-height:100vh;
+height:100vh;
 display:flex;
 align-items:center;
 justify-content:space-between;
-padding:180px 90px 80px;
+padding:180px 90px;
 position:relative;
 overflow:hidden;
 }
 
-/* VIDEO BACKGROUND */
-
-.hero video{
+.hero::before{
+content:"";
 position:absolute;
-top:0;
-left:0;
 width:100%;
 height:100%;
-object-fit:cover;
+top:0;
+left:0;
+background:url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070') center/cover;
+opacity:0.35;
 z-index:-2;
 }
 
-.hero::before{
-content:'';
+.hero::after{
+content:"";
 position:absolute;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.55);
 top:0;
 left:0;
+background:rgba(0,0,0,0.65);
 z-index:-1;
 }
 
-/* IMAGE */
-
 .hero-image{
-width:38%;
-display:flex;
-justify-content:center;
-animation:float 5s ease-in-out infinite;
+width:40%;
 }
 
 .hero-image img{
 width:100%;
 max-width:520px;
 border-radius:35px;
-background:rgba(255,255,255,0.08);
+background:rgba(255,255,255,0.05);
 padding:20px;
-box-shadow:0 0 50px rgba(0,0,0,0.6);
-transition:0.4s;
-backdrop-filter:blur(10px);
+box-shadow:0 0 40px rgba(124,252,0,0.4);
 }
-
-.hero-image img:hover{
-transform:scale(1.03);
-box-shadow:0 0 35px #7CFC00;
-}
-
-@keyframes float{
-0%{transform:translateY(0px);}
-50%{transform:translateY(-15px);}
-100%{transform:translateY(0px);}
-}
-
-/* ================= TEXT ================= */
 
 .hero-text{
-width:52%;
+width:50%;
 }
 
 .hero-text h3{
-font-size:75px;
+font-size:70px;
 color:#7CFC00;
 font-style:italic;
 }
@@ -415,13 +162,13 @@ margin:10px 0;
 .hero-text h2{
 font-size:55px;
 color:#7CFC00;
-margin:35px 0;
+margin:30px 0;
 }
 
 .hero-text p{
 font-size:34px;
-line-height:1.8;
-margin-bottom:45px;
+line-height:1.7;
+margin-bottom:40px;
 }
 
 .hero-text button{
@@ -430,114 +177,111 @@ border:none;
 background:#7CFC00;
 color:black;
 font-size:24px;
-font-weight:bold;
+font-weight:700;
 border-radius:50px;
 cursor:pointer;
 transition:0.3s;
 }
 
 .hero-text button:hover{
-transform:scale(1.08);
-box-shadow:0 0 30px #7CFC00;
+transform:scale(1.05);
 }
 
-/* ================= SOCIAL ================= */
+/* CONTACT SECTION */
+
+.social-section{
+padding:120px 20px;
+text-align:center;
+background:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=2070') center/cover;
+position:relative;
+}
+
+.social-section::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.75);
+}
+
+.social-content{
+position:relative;
+z-index:2;
+}
+
+.social-content h2{
+font-size:70px;
+color:#7CFC00;
+margin-bottom:20px;
+}
+
+.social-content p{
+font-size:24px;
+max-width:1000px;
+margin:auto;
+margin-bottom:60px;
+line-height:1.7;
+}
 
 .social-links{
 display:flex;
-gap:25px;
-margin-top:40px;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
 }
 
 .social-links a{
-width:65px;
-height:65px;
-border-radius:50%;
-background:rgba(255,255,255,0.08);
-display:flex;
-justify-content:center;
-align-items:center;
+padding:30px 60px;
+border-radius:40px;
 font-size:28px;
+font-weight:700;
 color:white;
-transition:0.3s;
 text-decoration:none;
+transition:0.3s;
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.facebook{
+background:#1877f2;
+}
+
+.whatsapp{
+background:#25D366;
+}
+
+.email{
+background:#ff4500;
 }
 
 .social-links a:hover{
-background:#7CFC00;
-color:black;
-transform:translateY(-8px);
+transform:translateY(-8px) scale(1.03);
 }
 
-/* ================= WHATSAPP ================= */
+/* WHATSAPP FLOAT */
 
-.whatsapp{
+.whatsapp-float{
 position:fixed;
 bottom:25px;
 right:25px;
-width:75px;
-height:75px;
+width:80px;
+height:80px;
 background:#25D366;
 border-radius:50%;
 display:flex;
 justify-content:center;
 align-items:center;
-font-size:38px;
+font-size:40px;
 color:white;
 text-decoration:none;
-z-index:9999;
-box-shadow:0 0 20px rgba(0,0,0,0.4);
-transition:0.3s;
+z-index:999;
+box-shadow:0 0 25px rgba(37,211,102,0.6);
 }
 
-.whatsapp:hover{
-transform:scale(1.1);
-}
-
-/* ================= GALLERY ================= */
-
-.gallery{
-padding:120px 80px;
-background:#0d1710;
-}
-
-.gallery-title{
-text-align:center;
-font-size:70px;
-margin-bottom:70px;
-color:#7CFC00;
-}
-
-.gallery-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
-}
-
-.gallery-grid img{
-width:100%;
-height:320px;
-object-fit:cover;
-border-radius:25px;
-transition:0.4s;
-box-shadow:0 0 20px rgba(0,0,0,0.4);
-}
-
-.gallery-grid img:hover{
-transform:scale(1.05);
-box-shadow:0 0 30px #7CFC00;
-}
-
-/* ================= FOOTER ================= */
-
-footer{
-padding:50px;
-text-align:center;
-background:black;
-font-size:18px;
-}
-
-/* ================= MOBILE ================= */
+/* MOBILE */
 
 @media(max-width:1200px){
 
@@ -565,7 +309,7 @@ font-size:75px;
 }
 
 .hero-text h2{
-font-size:38px;
+font-size:40px;
 }
 
 .hero-text p{
@@ -576,7 +320,7 @@ font-size:24px;
 font-size:45px;
 }
 
-.gallery-title{
+.social-content h2{
 font-size:50px;
 }
 
@@ -586,18 +330,6 @@ font-size:50px;
 </head>
 
 <body>
-
-<!-- LOADER -->
-
-<div class="loader">
-Chanuka Life
-</div>
-
-<!-- CURSOR -->
-
-<div class="cursor"></div>
-
-<!-- HEADER -->
 
 <header>
 
@@ -616,50 +348,63 @@ Chanuka Life
 <a href="#">Contact</a>
 </nav>
 
-<a href="mailto:chanuka81@gmail.com" class="contact-btn">
-Get In Touch
-</a>
+<a href="#contact" class="contact-btn">Get In Touch</a>
 
 </header>
 
-<!-- HERO -->
-
 <section class="hero">
 
-<video autoplay muted loop playsinline>
-<source src="https://cdn.coverr.co/videos/coverr-tea-plantation-1561977607266?download=1080p" type="video/mp4">
-</video>
-
 <div class="hero-image">
-<img src="myphoto.png" alt="">
+<img src="myphoto.png">
 </div>
 
 <div class="hero-text">
-
 <h3>Welcome to</h3>
-
-<h1>Chanuka<br>Life</h1>
-
+<h1>Chanuka Life</h1>
 <h2>Work • Growth • Nature</h2>
 
 <p>
-“ප්‍රජාවත්, පරිසරයත් එක්ක ජීවත් වෙනොනො කෙනෙක්ගේ ජීවන ගමන.”
+“ප්‍රජාවත්, පරිසරයත් එකක් ජීවත් වෙනොනා
+කෙනෙකුගේ ජීවන ගමන.”
 </p>
 
 <button>Explore My Journey</button>
 
+</div>
+
+</section>
+
+<section class="social-section" id="contact">
+
+<div class="social-content">
+
+<h2>Connect With Me</h2>
+
+<p>
+Follow my journey, community work, agriculture projects
+and connect with me directly.
+</p>
+
 <div class="social-links">
 
-<a href="https://www.facebook.com/chanuka.rajapaksha.73" target="_blank">
+<a href="https://www.facebook.com/chanuka.rajapaksha.73"
+target="_blank"
+class="facebook">
 <i class="fab fa-facebook-f"></i>
+Facebook
 </a>
 
-<a href="https://wa.me/94776353688" target="_blank">
+<a href="https://wa.me/94776353688"
+target="_blank"
+class="whatsapp">
 <i class="fab fa-whatsapp"></i>
+WhatsApp
 </a>
 
-<a href="mailto:chanuka81@gmail.com">
+<a href="mailto:chanuka81@gmail.com"
+class="email">
 <i class="fas fa-envelope"></i>
+Email
 </a>
 
 </div>
@@ -668,62 +413,11 @@ Get In Touch
 
 </section>
 
-<!-- GALLERY -->
-
-<section class="gallery">
-
-<h1 class="gallery-title">
-My Journey Gallery
-</h1>
-
-<div class="gallery-grid">
-
-<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
-
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
-
-<img src="https://images.unsplash.com/photo-1493246318656-5bfd4cfb29b8">
-
-<img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b">
-
-<img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e">
-
-<img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9">
-
-</div>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-
-© 2026 Chanuka Life | Designed with passion and purpose.
-
-</footer>
-
-<!-- WHATSAPP -->
-
-<a href="https://wa.me/94776353688" class="whatsapp" target="_blank">
-
+<a href="https://wa.me/94776353688"
+target="_blank"
+class="whatsapp-float">
 <i class="fab fa-whatsapp"></i>
-
 </a>
-
-<!-- JS -->
-
-<script>
-
-/* CUSTOM CURSOR */
-
-const cursor=document.querySelector('.cursor');
-
-document.addEventListener('mousemove',(e)=>{
-cursor.style.left=e.clientX+'px';
-cursor.style.top=e.clientY+'px';
-});
-
-</script>
 
 </body>
 </html>
