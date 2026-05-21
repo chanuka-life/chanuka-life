@@ -16,17 +16,16 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-scroll-behavior:smooth;
 }
 
 body{
 font-family:'Poppins',sans-serif;
-background:#071107;
-color:white;
+background:#081108;
 overflow-x:hidden;
+color:white;
 }
 
-/* HERO SECTION */
+/* HERO */
 
 .hero{
 
@@ -34,8 +33,8 @@ width:100%;
 min-height:100vh;
 
 background:
-linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.60)),
-url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070');
+linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.65)),
+url('https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=2070');
 
 background-size:cover;
 background-position:center;
@@ -62,17 +61,17 @@ top:0;
 left:0;
 z-index:1000;
 
-background:rgba(0,0,0,0.28);
+background:rgba(0,0,0,0.25);
 backdrop-filter:blur(12px);
 
 border-bottom:1px solid rgba(255,255,255,0.08);
-
 }
 
 /* LOGO */
 
 .logo h1{
-font-size:54px;
+
+font-size:52px;
 font-weight:800;
 line-height:0.9;
 }
@@ -96,7 +95,6 @@ color:#b8ff96;
 nav ul{
 
 display:flex;
-align-items:center;
 gap:42px;
 
 list-style:none;
@@ -123,7 +121,7 @@ color:#7CFF2B;
 
 padding:18px 38px;
 
-background:#68db29;
+background:#61d624;
 
 border-radius:50px;
 
@@ -158,23 +156,25 @@ align-items:center;
 gap:80px;
 }
 
-/* IMAGE CARD */
+/* IMAGE SIDE */
 
 .hero-image{
 
 width:450px;
 height:620px;
 
+position:relative;
+
 border-radius:35px;
 overflow:hidden;
 
 background:rgba(255,255,255,0.08);
 
-backdrop-filter:blur(14px);
-
-box-shadow:0 15px 50px rgba(0,0,0,0.45);
+backdrop-filter:blur(12px);
 
 border:1px solid rgba(255,255,255,0.08);
+
+box-shadow:0 20px 50px rgba(0,0,0,0.45);
 
 transition:0.4s;
 }
@@ -182,8 +182,6 @@ transition:0.4s;
 .hero-image:hover{
 
 transform:translateY(-10px);
-
-box-shadow:0 20px 60px rgba(0,0,0,0.55);
 }
 
 .hero-image img{
@@ -192,9 +190,30 @@ width:100%;
 height:100%;
 
 object-fit:cover;
+filter:drop-shadow(0 0 25px rgba(0,0,0,0.35));
 }
 
-/* TEXT */
+/* BLEND EFFECT */
+
+.hero-image::after{
+
+content:"";
+
+position:absolute;
+left:0;
+bottom:0;
+
+width:100%;
+height:120px;
+
+background:
+linear-gradient(to top,
+rgba(0,0,0,0.75),
+transparent);
+
+}
+
+/* TEXT SIDE */
 
 .hero-text{
 max-width:760px;
@@ -216,12 +235,11 @@ margin-bottom:15px;
 .hero-text h1{
 
 font-size:110px;
-
 line-height:1;
 
-margin-bottom:25px;
-
 font-family:'Playfair Display',serif;
+
+margin-bottom:25px;
 }
 
 .tagline{
@@ -229,7 +247,7 @@ font-family:'Playfair Display',serif;
 font-size:40px;
 font-weight:600;
 
-color:#92ff57;
+color:#8fff47;
 
 margin-bottom:40px;
 }
@@ -239,12 +257,12 @@ margin-bottom:40px;
 font-size:30px;
 line-height:1.8;
 
-color:#f1f1f1;
+color:#f2f2f2;
 
 margin-bottom:50px;
 }
 
-/* MAIN BUTTON */
+/* BUTTON */
 
 .main-btn{
 
@@ -252,7 +270,7 @@ display:inline-block;
 
 padding:24px 60px;
 
-background:#57c92a;
+background:#59ca2c;
 
 border-radius:60px;
 
@@ -276,7 +294,7 @@ box-shadow:0 0 40px rgba(124,255,43,0.45);
 
 .cards{
 
-margin-top:-70px;
+margin-top:-60px;
 
 padding-left:80px;
 padding-right:80px;
@@ -303,7 +321,6 @@ transition:0.3s;
 }
 
 .card:hover{
-
 transform:translateY(-10px);
 }
 
@@ -319,7 +336,6 @@ color:#2f6f1d;
 .card p{
 
 font-size:18px;
-
 line-height:1.8;
 
 color:#555;
@@ -354,7 +370,6 @@ margin-bottom:10px;
 }
 
 .stat p{
-
 font-size:22px;
 }
 
@@ -364,13 +379,12 @@ footer{
 
 padding:30px;
 
-text-align:center;
-
 background:#050505;
 
-color:#999;
+text-align:center;
 
 font-size:18px;
+color:#999;
 }
 
 /* MOBILE */
@@ -435,7 +449,6 @@ padding-right:25px;
 }
 
 nav{
-
 padding:0 25px;
 }
 
@@ -536,7 +549,7 @@ Explore My Journey
 
 <p>
 Working with rural communities for empowerment,
-development and sustainable change.
+development and sustainable social change.
 </p>
 
 </div>
