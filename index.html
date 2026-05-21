@@ -15,7 +15,113 @@
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+/* ================= FOOTER ================= */
 
+.footer{
+    background:#050505;
+    padding:60px 20px;
+    text-align:center;
+    border-top:2px solid #7CFC00;
+}
+
+.footer h2{
+    font-size:45px;
+    color:#7CFC00;
+    margin-bottom:10px;
+}
+
+.footer p{
+    color:white;
+    font-size:18px;
+    margin-bottom:20px;
+}
+
+.footer-links{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin:25px 0;
+}
+
+.footer-links a{
+    width:60px;
+    height:60px;
+    background:#111;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#7CFC00;
+    font-size:24px;
+    transition:0.3s;
+    text-decoration:none;
+}
+
+.footer-links a:hover{
+    background:#7CFC00;
+    color:black;
+    transform:translateY(-8px);
+    box-shadow:0 0 25px #7CFC00;
+}
+
+.copyright{
+    margin-top:25px;
+    color:#aaa;
+    font-size:14px;
+}/* ================= ANIMATIONS ================= */
+
+.fade-up{
+    opacity:0;
+    transform:translateY(50px);
+    animation:fadeUp 1.2s ease forwards;
+}
+
+.fade-left{
+    opacity:0;
+    transform:translateX(-80px);
+    animation:fadeLeft 1.2s ease forwards;
+}
+
+.fade-right{
+    opacity:0;
+    transform:translateX(80px);
+    animation:fadeRight 1.2s ease forwards;
+}
+
+.glow{
+    animation:glowPulse 2s infinite alternate;
+}
+
+@keyframes fadeUp{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes fadeLeft{
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+@keyframes fadeRight{
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+@keyframes glowPulse{
+    from{
+        box-shadow:0 0 10px #7CFC00;
+    }
+
+    to{
+        box-shadow:0 0 35px #7CFC00;
+    }
+}
 <style>
 
 /* ================= GLOBAL ================= */
@@ -26,7 +132,29 @@ padding:0;
 box-sizing:border-box;
 scroll-behavior:smooth;
 }
+<!-- FOOTER -->
+<footer class="footer">
+    <h2>Chanuka Life</h2>
+    <p>Work • Growth • Nature</p>
 
+    <div class="footer-links">
+        <a href="https://facebook.com/" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="https://wa.me/94700000000" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+        <a href="mailto:yourmail@gmail.com">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+
+    <p class="copyright">
+        © 2026 Chanuka Life | All Rights Reserved
+    </p>
+</footer>
 body{
 font-family:'Poppins',sans-serif;
 background:#050b07;
@@ -538,13 +666,13 @@ Get In Touch
 
 <section class="hero">
 
-<div class="hero-image">
+<div class="hero-image fade-left glow">
 
 <img src="myphoto.png" alt="Chanuka">
 
 </div>
 
-<div class="hero-text">
+<div class="hero-text fade-right">
 
 <h3>Welcome to</h3>
 
@@ -618,7 +746,7 @@ My Journey Gallery
 
 </h1>
 
-<div class="gallery-grid">
+<div class="gallery-container fade-up">
 
 <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
 
