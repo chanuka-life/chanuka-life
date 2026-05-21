@@ -97,23 +97,26 @@ background:#74db57;
 /* HERO CONTENT */
 
 .hero-content{
-width:100%;
-min-height:100vh;
 display:flex;
 align-items:center;
 justify-content:space-between;
-padding:120px 8% 60px;
-gap:60px;
-flex-wrap:wrap;
+gap:50px;
 }
 
 .hero-image{
 width:420px;
 height:550px;
 border-radius:25px;
-background-image:url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=987');
+
+background:url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=987');
+
 background-size:cover;
 background-position:center;
+background-repeat:no-repeat;
+
+display:block;
+flex-shrink:0;
+
 box-shadow:0 15px 40px rgba(0,0,0,0.5);
 }
 
