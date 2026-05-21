@@ -310,7 +310,49 @@ display:none;
 }
 
 }
+.hero-image img{
+    transition:0.4s;
+    filter:drop-shadow(0 0 25px rgba(124,252,0,0.35));
+}
 
+.hero-image img:hover{
+    transform:scale(1.03);
+}
+
+nav{
+    backdrop-filter:blur(10px);
+    background:rgba(0,0,0,0.45);
+}
+
+.button{
+    transition:0.3s;
+}
+
+.button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 25px rgba(124,252,0,0.5);
+}
+
+.info-cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin-top:80px;
+}
+
+.card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:20px;
+    padding:30px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    background:rgba(255,255,255,0.12);
+}
 </style>
 
 </head>
@@ -370,7 +412,29 @@ Explore My Journey
 </div>
 
 </header>
+<section class="info-cards">
 
+<div class="card">
+<h2>Community Development</h2>
+<p>Working with rural communities for empowerment and sustainable change.</p>
+</div>
+
+<div class="card">
+<h2>Agriculture</h2>
+<p>Passionate about tea cultivation, nature and modern farming.</p>
+</div>
+
+<div class="card">
+<h2>Education</h2>
+<p>Research, learning and sharing knowledge for future generations.</p>
+</div>
+
+<div class="card">
+<h2>Sri Lanka Journey</h2>
+<p>From village life to meaningful service across Sri Lanka.</p>
+</div>
+
+</section>
 <!-- CARDS -->
 
 <section class="cards">
@@ -440,6 +504,8 @@ across Sri Lanka.
 <footer>
 © 2026 Chanuka Life | Built with passion for community & nature.
 </footer>
-
+<footer style="text-align:center;padding:30px;color:white;background:#111;margin-top:60px;">
+© 2026 Chanuka Life | Built with Passion 💚
+</footer>
 </body>
 </html>
